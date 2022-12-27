@@ -1,0 +1,13 @@
+
+create tigger //vaidob//
+before insert on //empolye//
+for each row exucated  produers //fun3();///
+create or replace function fun3() return trriger as 
+'
+declare 
+begine
+if new .dob>current date then
+raise rxception "you cannot enter futer date";
+end if ;
+returnnw;
+'languge plpgsql';
